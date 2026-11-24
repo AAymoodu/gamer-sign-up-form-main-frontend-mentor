@@ -30,21 +30,56 @@
     <main>
       <section id="Brand_column">
         <!-- Brand column starts -->
+        <img src="./assets/images/logo.svg" alt="NEONCORE logo" srcset="" />
 
-        <img src="./assets/images/logo.svg" alt="NEONCORE logo" srcset="">
-        <!-- NEONCORE logo -->
-        <h1><span style="color: hsl(77 90% 59%);">//</span> Join the nexus</h1>
-        Initialize your NEONCORE identity
+        <div id="brand_welcome">
+          <!-- NEONCORE logo -->
+          <h1><span style="color: hsl(77 90% 59%)">//</span> Join the nexus</h1>
+          <p>Initialize your NEONCORE identity</p>
+        </div>
 
-        <!-- Operator ID readout (on tablet and mobile it becomes a one-line strip: Operator ID + callsign) -->
-        Operator ID
-        <!-- Dynamic: ready count, then "Provisioned" after success -->
-        [0]/5 ready
-        <!-- Dynamic: "Unassigned" until the callsign is valid, then the callsign -->
-        Unassigned Callsign Email Password Confirm Terms
+        <hr />
+        <div id="signUp_checker">
+          <div id="Operator_id">
+            <!-- Operator ID readout (on tablet and mobile it becomes a one-line strip: Operator ID + callsign) -->
+            <p>Operator ID</p>
+            <!-- Dynamic: ready count, then "Provisioned" after success -->
+            <p>[0]/5 ready</p>
+          </div>
+          <!-- Dynamic: "Unassigned" until the callsign is valid, then the callsign -->
+          <h2>Unassigned</h2>
+          <ul>
+            <li>
+              <p>Callsign</p>
+              <div></div>
+              <p>Pending</p>
+            </li>
+            <li>
+              <p>Email</p>
+              <div></div>
+              <p>Pending</p>
+            </li>
+            <li>
+              <p>Password</p>
+              <div></div>
+              <p>Pending</p>
+            </li>
+            <li>
+              <p>Confirm</p>
+              <div></div>
+              <p>Pending</p>
+            </li>
 
-        <!-- Dynamic: row statuses -->
-        Pending Required OK Locked
+            <li>
+              <p>Terms</p>
+              <div></div>
+              <p>Required</p>
+            </li>
+          </ul>
+
+          <!-- Dynamic: row statuses -->
+          Pending Required OK Locked
+        </div>
 
         <!-- Dynamic: fault codes shown on a row when its field has an error -->
         Missing Too short Too long Bad character Malformed Mismatch

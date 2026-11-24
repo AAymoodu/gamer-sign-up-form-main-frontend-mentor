@@ -1,0 +1,53 @@
+/* Orbitron font Style */
+@font-face {
+  font-family: Orbitron;
+  src: url("./assets/fonts/orbitron/static/orbitron-800.ttf");
+}
+/* JetBrains Mono font Style */
+@font-face {
+  font-family: JetBrains Mono;
+  src:
+    url("./assets/fonts/jetbrains-mono/static/jetbrains-mono-400.ttf"),
+    url("./assets/fonts/jetbrains-mono/static/jetbrains-mono-700.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+body {
+  background-color: hsl(214 60% 2%);
+  color: hsl(208 49% 92%);
+  max-width: 80%;
+  margin: 5rem auto;
+  background-image: url("./assets/images/pattern-backdrop.svg");
+  background-repeat: no-repeat;
+  background-position-y: 10% ;
+  background-position-x: 135%;
+  background-size: 49rem;
+}
+main {
+  display: flex;
+  align-items: center;
+}
+section {
+  max-width: 50%;
+  margin: 1rem;
+}
+/* will undo this later */
+section#Success_view {
+  display: none;
+}
+
+section#Sign-up_form {
+  font-family: JetBrains Mono;
+  font-weight: 700;
+}
+
+section#Brand_column h1{
+font-family: Orbitron;
+font-size: 4.5rem;
+letter-spacing: 0.04em;
+}
+

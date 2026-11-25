@@ -89,14 +89,65 @@
 
       <section id="Sign-up_form">
         <!-- Sign-up form starts -->
+        <div id="form_begin">
+          <p style="font-weight: 700">New operator</p>
+          <p>
+            <span class="for_Desktop">All fields required</span
+            ><span class="for_Mobile">All required</span>
+          </p>
+        </div>
 
-        New operator All fields required
+        <hr />
+
+        <form>
+          <div id="callsign_inputBox" class="inputBox">
+            <label for="callsign_input"><span>></span> Callsign</label>
+            <div class="input-wrapper">
+              <input
+                id="callsign_input"
+                type="text"
+                placeholder="e.g. Vortex_07"
+              />
+              <!-- <img class="uncheck" src="./assets/images/icon-tick-16.svg" alt=""> -->
+              <img
+                class="check"
+                src="./assets/images/icon-tick-20.svg"
+                alt=""
+              />
+            </div>
+            <p>3–20 characters: letters, numbers, _ or -</p>
+          </div>
+
+          <div id="email_inputBox" class="inputBox">
+            <label for="email_input"><span>></span> Email</label>
+            <div class="input-wrapper">
+              <input
+                id="email_input"
+                type="email"
+                placeholder="you@example.com"
+              />
+              <!-- <img class="uncheck" src="./assets/images/icon-tick-16.svg" alt=""> -->
+              <img
+                class="check"
+                src="./assets/images/icon-tick-20.svg"
+                alt=""
+              />
+            </div>
+            <p></p>
+          </div>
+        </form>
         <!-- Mobile -->
-        All required > Callsign e.g. Vortex_07 3–20 characters: letters,
-        numbers, _ or - Enter a callsign Use at least 3 characters Use 20
-        characters or fewer Use letters, numbers, _ or - only > Email
-        you@example.com Enter your email Enter a valid email, like
-        you@example.com > Password
+
+        <!-- For Callsign -->
+        <!-- Enter a callsign Use at least 3 characters Use 20 characters or fewer
+        Use letters, numbers, _ or - only -->
+        
+        <!-- For Email -->
+        <!-- > Email  Enter your email
+          Enter a valid email, like you@example.com -->
+
+
+         > Password
         <!-- Show / hide password button -->
         At least 8 characters
         <!-- Dynamic: password strength -->

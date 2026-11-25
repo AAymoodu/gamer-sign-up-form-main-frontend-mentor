@@ -29,8 +29,16 @@
   --Neutral-100: hsl(208 49% 92%);
   --Neutral-50: hsl(204 60% 97%);
 
+  /* Lime */
+
+  --Lime500: hsl(77 90% 59%);
+  --Lime700: hsl(77 67% 39%);
   /* Font Styles */
   --Orbitron: "Orbitron";
+  --JetBrains-Mono: "JetBrains Mono";
+}
+.for_Mobile {
+  display: none;
 }
 body {
   background-color: hsl(214 60% 2%);
@@ -62,11 +70,6 @@ section#Success_view {
   display: none;
 }
 
-section#Sign-up_form {
-  font-family: "JetBrains Mono";
-  font-weight: 700;
-}
-
 section#Brand_column h1 {
   font-family: "Orbitron";
   font-size: 4.5rem;
@@ -92,7 +95,7 @@ section#Brand_column div#brand_welcome p {
   font-size: 0.75rem;
   letter-spacing: 0.16em;
 }
-hr {
+section#Brand_column hr {
   border-color: var(--Neutral-400);
   opacity: 25%;
   margin-top: 2rem;
@@ -130,4 +133,111 @@ ul li div {
   height: 1px;
   background-color: var(--Neutral-400);
   opacity: 25%;
+}
+
+section#Sign-up_form {
+  font-family: "JetBrains Mono";
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  padding: 2.5rem;
+  background-color: var(--Neutral-900);
+  position: relative;
+  border: 1px solid var(--Neutral-700);
+  color: var(--Neutral-600);
+}
+
+section#Sign-up_form::before,
+section#Sign-up_form::after {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  /* border: 1px solid var(--Lime500) ; */
+  border-color: var(--Lime500);
+  border-style: solid;
+  pointer-events: none;
+}
+section#Sign-up_form::before {
+  top: -1px; /* Overlaps the subtle dark border cleanly */
+  left: -1px;
+  border-width: 2px 0 0 2px; /* Top and left borders only */
+}
+section#Sign-up_form::after {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 2px 2px 0; /* Bottom and right borders only */
+}
+section#Sign-up_form div#form_begin {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 0.5rem; */
+  margin-bottom: 1rem;
+}
+
+section#Sign-up_form hr {
+  border-color: var(--Neutral-400);
+  opacity: 25%;
+  margin-bottom: 1.5rem;
+}
+
+div.inputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+div.inputBox span {
+  color: var(--Lime500);
+}
+div.inputBox input {
+  text-transform: none;
+  padding: 0.7rem 0.6rem;
+  font-family: var(--JetBrains-Mono);
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  margin: 2px;
+}
+
+div.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--Neutral-700);
+  /* padding: 0.2rem 0.5rem; */
+  border-radius: 2px;
+  background-color: var(--Neutral-950);
+}
+div.input-wrapper input {
+  flex: 1;
+  background-color: inherit;
+  color: var(--Neutral-300);
+}
+div.input-wrapper input::placeholder {
+  color: var(--Neutral-600);
+  font-family: var(--JetBrains-Mono);
+  font-weight: 400;
+  font-size: 1rem;
+}
+div.input-wrapper img {
+  padding: 0.2rem 0.5rem;
+}
+.check {
+  display: none;
+}
+
+div.input-wrapper.checked {
+  img.uncheck {
+    display: none;
+  }
+  img.check {
+    display: block;
+  }
+}
+div.input-wrapper:focus-within {
+  border-color: var(--Lime500);
+  input{
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: var(--Lime500);
+  }
 }

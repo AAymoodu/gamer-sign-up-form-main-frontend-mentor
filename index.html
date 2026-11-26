@@ -100,6 +100,7 @@
         <hr />
 
         <form>
+          <!-- for callsign👇 -->
           <div id="callsign_inputBox" class="inputBox">
             <label for="callsign_input"><span>></span> Callsign</label>
             <div class="input-wrapper">
@@ -115,9 +116,11 @@
                 alt=""
               />
             </div>
-            <p>3–20 characters: letters, numbers, _ or -</p>
+            <p class="status">3–20 characters: letters, numbers, _ or -</p>
           </div>
+          <!-- for callsign👆 -->
 
+          <!-- for Email👇 -->
           <div id="email_inputBox" class="inputBox">
             <label for="email_input"><span>></span> Email</label>
             <div class="input-wrapper">
@@ -133,21 +136,42 @@
                 alt=""
               />
             </div>
-            <p></p>
+            <p class="status"></p>
           </div>
+          <!-- for Email👆 -->
+
+          <!-- for Password👇 -->
+          <div id="password_inputBox" class="inputBox">
+            <label for="password_input"><span>></span> Password</label>
+            <div class="input-wrapper">
+              <input
+                id="password_input"
+                type="password"
+                placeholder=""
+              />
+              <!-- <img class="uncheck" src="./assets/images/icon-tick-16.svg" alt=""> -->
+              <img
+                class="check"
+                src="./assets/images/icon-tick-20.svg"
+                alt="checkmark"
+              />
+              <img class="check_password" src="./assets/images/icon-eye.svg" alt="">
+            </div>
+            <p class="status">3–20 characters: letters, numbers, _ or -</p>
+          </div>
+          <!-- for Password👆 -->
         </form>
         <!-- Mobile -->
 
         <!-- For Callsign -->
         <!-- Enter a callsign Use at least 3 characters Use 20 characters or fewer
         Use letters, numbers, _ or - only -->
-        
+
         <!-- For Email -->
         <!-- > Email  Enter your email
           Enter a valid email, like you@example.com -->
 
-
-         > Password
+        > Password
         <!-- Show / hide password button -->
         At least 8 characters
         <!-- Dynamic: password strength -->

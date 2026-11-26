@@ -33,6 +33,10 @@
 
   --Lime500: hsl(77 90% 59%);
   --Lime700: hsl(77 67% 39%);
+
+  /* Red */
+  --Red400: hsl(4 100% 74%);
+
   /* Font Styles */
   --Orbitron: "Orbitron";
   --JetBrains-Mono: "JetBrains Mono";
@@ -56,8 +60,9 @@ body {
 }
 main {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  /* align-items: center; */
+  gap: 2.5rem;
+  align-items: stretch;
 }
 section {
   max-width: 50%;
@@ -178,13 +183,14 @@ section#Sign-up_form div#form_begin {
 section#Sign-up_form hr {
   border-color: var(--Neutral-400);
   opacity: 25%;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
 }
 
 div.inputBox {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-top: 1.5rem;
 }
 div.inputBox span {
   color: var(--Lime500);
@@ -219,25 +225,54 @@ div.input-wrapper input::placeholder {
   font-size: 1rem;
 }
 div.input-wrapper img {
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem ;
+  margin-right: 0.75rem;
+}
+div.input-wrapper img.check_password {
+  padding: 0.2rem ;
+  margin-right: 0.5rem;
 }
 .check {
   display: none;
 }
-
-div.input-wrapper.checked {
-  img.uncheck {
-    display: none;
-  }
-  img.check {
-    display: block;
+div.inputBox.checked {
+  div.input-wrapper {
+    img.uncheck {
+      display: none;
+    }
+    img.check {
+      display: block;
+    }
   }
 }
 div.input-wrapper:focus-within {
   border-color: var(--Lime500);
-  input{
+  input {
     outline-width: 1px;
     outline-style: solid;
     outline-color: var(--Lime500);
   }
+  img{
+        outline-width: 1px;
+    outline-style: solid;
+    outline-color: var(--Lime500);
+  }
+}
+
+div.inputBox.error {
+  div.input-wrapper {
+    border-color: var(--Red400);
+  }
+
+  div.input-wrapper:focus-within {
+  border-color: var(--Lime500);
+  input {
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: var(--Lime500);
+  }
+}
+p{
+  color: var(--Red400);
+}
 }
